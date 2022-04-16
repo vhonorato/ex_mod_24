@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start-server": "cd ../server && npm start",
-    "test:consumer": "jest --runInBand test/consumer.spec.js",
+    "test:consumer": "jest --runInBand test/customers.consumer.spec.js",
     "test:provider": "jest --runInBand test/provider.spec.js",
     "publish:broker": "node broker/publish.broker.js",
     "test:pact": "npm run test:consumer && npm run test:provider",
