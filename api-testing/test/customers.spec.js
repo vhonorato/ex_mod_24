@@ -8,7 +8,7 @@ describe("Customers resource", () => {
   let customerId;
   beforeAll(async () => (token = await getAccessToken()));
 
-  it("should create a new customer", async () => {
+  it("(E2E) should create a new customer", async () => {
     await request(API_URL)
       .post("/customers")
       .send({
@@ -26,7 +26,7 @@ describe("Customers resource", () => {
       });
   });
 
-  it("should list customers", async () => {
+  it("(E2E) should list customers", async () => {
     await request(API_URL)
       .get("/customers")
       .set("Accept", "application/json")
@@ -37,7 +37,7 @@ describe("Customers resource", () => {
       });
   });
 
-  it("should delete a customer", async () => {
+  it("(E2E) should delete a customer", async () => {
     await request(API_URL)
       .delete(`/customers/${customerId}`)
       .set("Accept", "application/json")

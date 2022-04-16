@@ -8,14 +8,14 @@ describe("Addresses resource", () => {
   let addressId;
   beforeAll(async () => (token = await getAccessToken()));
 
-  it("should create a new address", async () => {
+  it("(E2E) should create a new address", async () => {
     await request(API_URL)
       .post("/addresses")
       .send({
         address_1: Addresses.street,
         city: Addresses.city,
         state: Addresses.state,
-        zip: 343435,
+        zip: Addresses.zip,
       })
       .set("Accept", "application/json")
       .set("Authorization", `Bearer ${token}`)
@@ -26,7 +26,7 @@ describe("Addresses resource", () => {
       });
   });
 
-  it("should list addresses", async () => {
+  it("(E2E) should list addresses", async () => {
     await request(API_URL)
       .get("/addresses")
       .set("Accept", "application/json")
@@ -37,7 +37,7 @@ describe("Addresses resource", () => {
       });
   });
 
-  it("should delete a address", async () => {
+  it("(E2E) should delete a address", async () => {
     await request(API_URL)
       .delete(`/addresses/${addressId}`)
       .set("Accept", "application/json")
