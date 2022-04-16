@@ -1,6 +1,6 @@
-I, [2022-04-15T21:06:39.759119 #684]  INFO -- : Verifying - interactions matched
-I, [2022-04-15T21:06:39.760119 #684]  INFO -- : Registered expected interaction POST /graphql
-I, [2022-04-15T21:06:39.761119 #684]  INFO -- : Received request POST /graphql
-I, [2022-04-15T21:06:39.764119 #684]  INFO -- : Found matching response for POST /graphql
-I, [2022-04-15T21:06:39.774133 #684]  INFO -- : Cleared interactions
-I, [2022-04-15T21:06:39.789326 #684]  INFO -- : Writing pact for ebac-demo-store-server to C:/Users/Vinicius/ex_mod_24/contract-testing/pacts/ebac-demo-store-admin-ebac-demo-store-server.json
+I, [2022-04-15T22:02:36.825520 #11980]  INFO -- : Verifying - interactions matched
+I, [2022-04-15T22:02:36.826520 #11980]  INFO -- : Registered expected interaction POST /graphql
+I, [2022-04-15T22:02:36.827518 #11980]  INFO -- : Received request POST /graphql
+I, [2022-04-15T22:02:36.829521 #11980]  INFO -- : Found matching response for POST /graphql
+I, [2022-04-15T22:02:36.854540 #11980]  INFO -- : Cleared interactions
+I, [2022-04-15T22:02:36.867519 #11980]  INFO -- : Writing pact for ebac-demo-store-server to C:/Users/Vinicius/ex_mod_24/contract-testing/pacts/ebac-demo-store-admin-ebac-demo-store-server.json

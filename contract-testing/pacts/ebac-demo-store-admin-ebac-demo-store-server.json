@@ -16,7 +16,7 @@
           "Content-Type": "application/json"
         },
         "body": {
-          "operationName": "customers",
+          "operationName": "addresses",
           "variables": {
             "where": {
             },
@@ -26,7 +26,7 @@
               "id": "Asc"
             }
           },
-          "query": "query customers($where: CustomerWhereInput, $orderBy: CustomerOrderByInput, $skip: Float, $take: Float) {\n  items: customers(where: $where, orderBy: $orderBy, skip: $skip, take: $take) {\n    createdAt\n    email\n    firstName\n    id\n    lastName\n    phone\n    updatedAt\n    orders {\n      id\n      __typename\n    }\n    address {\n      id\n      __typename\n    }\n    __typename\n  }\n  total: _customersMeta(where: $where, orderBy: $orderBy, skip: $skip, take: $take) {\n    count\n    __typename\n  }\n}\n"
+          "query": "query addresses($where: AddressWhereInput, $orderBy: AddressOrderByInput, $skip: Float, $take: Float) {\n  items: addresses(where: $where, orderBy: $orderBy, skip: $skip, take: $take) {\n    address_1\n    address_2\n    city\n    createdAt\n    id\n    state\n    updatedAt\n    zip\n    customers {\n      id\n      __typename\n    }\n    __typename\n  }\n  total: _addressesMeta(where: $where, orderBy: $orderBy, skip: $skip, take: $take) {\n    count\n    __typename\n  }\n}\n"
         }
       },
       "response": {
@@ -38,38 +38,38 @@
           "data": {
             "items": [
               {
-                "createdAt": "2022-04-15T20:30:33.558Z",
-                "email": "v.honorato@live.com",
-                "firstName": "Vinicius",
-                "id": "cl20vxbo50304p8uhrz01kxhu",
-                "lastName": "Honorato",
-                "phone": "+5511945348422",
-                "updatedAt": "2022-04-15T20:30:33.558Z",
-                "orders": [
-
+                "address_1": "Rua Cruz Jobim",
+                "address_2": null,
+                "city": "São Paulo",
+                "createdAt": "2022-04-15T20:29:46.889Z",
+                "id": "cl20vwbns0236p8uh5ebix9tb",
+                "state": "SP",
+                "updatedAt": "2022-04-15T20:29:46.889Z",
+                "zip": 3435060,
+                "customers": [
+                  {
+                    "id": "cl20vxbo50304p8uhrz01kxhu",
+                    "__typename": "Customer"
+                  }
                 ],
-                "address": {
-                  "id": "cl20vwbns0236p8uh5ebix9tb",
-                  "__typename": "Address"
-                },
-                "__typename": "Customer"
+                "__typename": "Address"
               },
               {
-                "createdAt": "2022-04-15T20:30:33.558Z",
-                "email": "v.honorato@live.com",
-                "firstName": "Vinicius",
-                "id": "cl20vxbo50304p8uhrz01kxhu",
-                "lastName": "Honorato",
-                "phone": "+5511945348422",
-                "updatedAt": "2022-04-15T20:30:33.558Z",
-                "orders": [
-
+                "address_1": "Rua Cruz Jobim",
+                "address_2": null,
+                "city": "São Paulo",
+                "createdAt": "2022-04-15T20:29:46.889Z",
+                "id": "cl20vwbns0236p8uh5ebix9tb",
+                "state": "SP",
+                "updatedAt": "2022-04-15T20:29:46.889Z",
+                "zip": 3435060,
+                "customers": [
+                  {
+                    "id": "cl20vxbo50304p8uhrz01kxhu",
+                    "__typename": "Customer"
+                  }
                 ],
-                "address": {
-                  "id": "cl20vwbns0236p8uh5ebix9tb",
-                  "__typename": "Address"
-                },
-                "__typename": "Customer"
+                "__typename": "Address"
               }
             ],
             "total": {
@@ -85,28 +85,28 @@
           "$.body.data.items[*].*": {
             "match": "type"
           },
+          "$.body.data.items[*].address_1": {
+            "match": "type"
+          },
+          "$.body.data.items[*].city": {
+            "match": "type"
+          },
           "$.body.data.items[*].createdAt": {
-            "match": "type"
-          },
-          "$.body.data.items[*].email": {
-            "match": "type"
-          },
-          "$.body.data.items[*].firstName": {
             "match": "type"
           },
           "$.body.data.items[*].id": {
             "match": "type"
           },
-          "$.body.data.items[*].lastName": {
-            "match": "type"
-          },
-          "$.body.data.items[*].phone": {
+          "$.body.data.items[*].state": {
             "match": "type"
           },
           "$.body.data.items[*].updatedAt": {
             "match": "type"
           },
-          "$.body.data.items[*].__typename": {
+          "$.body.data.items[*].zip": {
+            "match": "type"
+          },
+          "$.body.data.items[*].customers[0].__typename": {
             "match": "type"
           }
         }
