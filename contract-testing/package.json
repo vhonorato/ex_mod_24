@@ -4,7 +4,7 @@
   "scripts": {
     "start-server": "cd ../server && npm start",
     "test:consumer": "jest --runInBand test/customers.consumer.spec.js",
-    "test:provider": "jest --runInBand test/provider.spec.js",
+    "test:provider": "jest --runInBand test/customers.provider.spec.js",
     "publish:broker": "node broker/publish.broker.js",
     "test:pact": "npm run test:consumer && npm run test:provider",
     "test": "start-server-and-test start-server http://localhost:3000/api 'npm run test:pact'"
